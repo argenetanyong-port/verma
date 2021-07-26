@@ -71,10 +71,114 @@ h3 {
   background-color: #fcf4ef;
 }
 
+/*--------------------------------------------------------
 /* Lists */
 .list {
   list-style: none;
   padding-left: 0;
+}
+
+.list--inline .list__item {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.list--tick {
+  list-style-image: url(../images/tick.svg);
+  padding-left: 3rem;
+  color: var(--color-headings);
+}
+
+.list--tick .list__item {
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .list--tick .list__item {
+    padding-left: 0;
+  }
+}
+
+/* Icons */
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
+
+.icon--primary {
+  fill: var(--color-primary);
+}
+
+.icon--white {
+  fill: #443636;
+}
+
+.icon-container {
+  background: #f3f9fa;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.icon-container--accent {
+  background: var(--color-accent);
+}
+
+/* Collapsibles */
+.collapsible__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.collapsible__heading {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.collapsible__chevron {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.collapsible--expanded .collapsible__chevron {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
 }
 
 /* Navigation Bar */
@@ -158,44 +262,6 @@ h3 {
   }
 }
 
-/* Collapsibles */
-.collapsible__header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.collapsible__heading {
-  margin-top: 0;
-  font-size: 3rem;
-}
-
-.collapsible__content {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.collapsible--expanded .collapsible__content {
-  max-height: 100vh;
-  opacity: 1;
-}
-
-/* Icons */
-.icon {
-  width: 40px;
-  height: 40px;
-}
-
-.icon--white {
-  fill: #fff;
-}
-
 .hero-container {
   background-color: #edd3c1;
   background-image: url();
@@ -218,6 +284,14 @@ h3 {
   display: block;
 }
 
+.card-intro {
+  text-align: center;
+}
+
+.card-intro-paragraph {
+  font-size: 1.5rem;
+}
+
 .card {
   border-radius: 40px;
   -webkit-box-shadow: 0 0 50px 20px #f3f3f3;
@@ -230,6 +304,7 @@ h3 {
   -webkit-box-shadow: 0 0 50px 1px lightgray;
           box-shadow: 0 0 50px 1px lightgray;
   border-radius: 40px;
+  background-color: white;
   color: black;
   overflow: hidden;
   width: 40rem;
@@ -240,7 +315,7 @@ h3 {
   background-image: url(../images/image1.png);
   background-size: 113%;
   background-position-x: -26px;
-  background-position-y: -100px;
+  background-position-y: -120px;
   height: 40rem;
 }
 
@@ -248,7 +323,7 @@ h3 {
   background-image: url(../images/image2.png);
   background-size: 113%;
   background-position-x: -26px;
-  background-position-y: -100px;
+  background-position-y: -120px;
   height: 40rem;
 }
 
@@ -256,7 +331,7 @@ h3 {
   background-image: url(../images/image3.png);
   background-size: 113%;
   background-position-x: -26px;
-  background-position-y: -100px;
+  background-position-y: -120px;
   height: 40rem;
 }
 
@@ -331,19 +406,19 @@ h3 {
   .card-image1-container {
     background-size: 115%;
     background-position-x: -21px;
-    background-position-y: -110px;
+    background-position-y: -100px;
     height: 30rem;
   }
   .card-image2-container {
     background-size: 115%;
     background-position-x: -21px;
-    background-position-y: -110px;
+    background-position-y: -100px;
     height: 30rem;
   }
   .card-image3-container {
     background-size: 115%;
     background-position-x: -21px;
-    background-position-y: -110px;
+    background-position-y: -100px;
     height: 30rem;
   }
   .card-text-container {
