@@ -1,14 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header>
+      <nav class="nav collapsible">
+        <a class="nav__brand" href="/"><img src="images/logo.svg" alt="" /></a>
+        <svg class="icon icon--white nav__toggler">
+          <use href="images/sprite.svg#menu"></use>
+        </svg>
+        <ul class="list nav__list collapsible__content">
+          <li class="nav__item"><a href="#">Shop</a></li>
+          <li class="nav__item"><a href="#">Our Story</a></li>
+          <li class="nav__item"><a href="#">Learn</a></li>
+          <li class="nav__item"><a href="#">Community</a></li>
+          <li class="nav__item"><a href="#">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero-container grid grid--1x2 hero-banner-wave">
+      <div class="hero-container-product-image">
+        <img class="hero-product-image" src="images/product-image.png" alt="" />
+      </div>
+      <header>
+        <h1>
+          Pure All Natural <br />
+          CBD inspired by the <br />
+          Islands of Hawaii
+        </h1>
+        <p class="hero__tagline">ZERO THC - all natural cannabidoil</p>
+        <button class="btn btn--primary">Shop now</button>
+      </header>
+    </section>
+    <!-- LOTTIE ANIMATION -->
+
+    <script src="lottie.js"></script>
+    <script src="script.js"></script>
+    <!-- LOTTIE ANIMATION -->
+    <div class="card-intro">
+      <h2>Verma's Benefits</h2>
+      <p class="card-intro-paragraph">
+        Lorem ipsum dolor sit amet consectetur <br />adipisicing elit. Iste,
+        explicabo!
+      </p>
+    </div>
+
+    <section class="block container block-cards">
+      <div class="grid grid--1x3">
+        <div class="card-container">
+          <div class="card-image1-container"></div>
+          <div class="card-text-container">
+            <p class="card1-text">
+              Quite your mind <br />
+              and calm the storm.
+            </p>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card-image2-container"></div>
+          <div class="card-text-container">
+            <p class="card2-text">
+              Ease your pain and <br />
+              sooth your joint.
+            </p>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card-image3-container"></div>
+          <div class="card-text-container">
+            <p class="card3-text">
+              Sleep tight and wake<br />
+              up refreshed
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>

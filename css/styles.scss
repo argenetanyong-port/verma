@@ -46,8 +46,9 @@ h2 {
 h3 {
   font-size: 3rem;
 }
-
+//--------------------------------------------------------
 //BUTTONS-----------------------
+//--------------------------------------------------------
 .btn {
   font-size: 1.4rem;
   padding: 2rem 5rem;
@@ -81,8 +82,10 @@ h3 {
   background-color: $color-bg-secondary;
 }
 
-/*--------------------------------------------------------
+//--------------------------------------------------------
 /* Lists */
+//--------------------------------------------------------
+
 .list {
   list-style: none;
   padding-left: 0;
@@ -96,7 +99,6 @@ h3 {
 .list--tick {
   list-style-image: url(../images/tick.svg);
   padding-left: 3rem;
-  color: var(--color-headings);
 }
 
 .list--tick .list__item {
@@ -122,7 +124,7 @@ h3 {
 }
 
 .icon--primary {
-  fill: var(--color-primary);
+  fill: white;
 }
 
 .icon--white {
@@ -139,11 +141,10 @@ h3 {
   align-items: center;
 }
 
-.icon-container--accent {
-  background: var(--color-accent);
-}
-
+//--------------------------------------------------------
 /* Collapsibles */
+//--------------------------------------------------------
+
 .collapsible__header {
   display: flex;
   justify-content: space-between;
@@ -154,11 +155,6 @@ h3 {
   font-size: 3rem;
 }
 
-.collapsible__chevron {
-  transform: rotate(-90deg);
-  transition: transform 0.3s;
-}
-
 .collapsible__content {
   max-height: 0;
   overflow: hidden;
@@ -166,16 +162,15 @@ h3 {
   transition: all 0.3s;
 }
 
-.collapsible--expanded .collapsible__chevron {
-  transform: rotate(0);
-}
-
 .collapsible--expanded .collapsible__content {
   max-height: 100vh;
   opacity: 1;
 }
 
+//--------------------------------------------------------
 /* Navigation Bar */
+//--------------------------------------------------------
+
 .nav {
   background: $color-bg-primary;
   display: flex;
@@ -192,7 +187,6 @@ h3 {
 
 .nav__item {
   padding: 0.5rem 2rem;
-  border-bottom: 1px solid #222;
 }
 
 .nav__item:last-of-type {
@@ -242,14 +236,16 @@ h3 {
     border: 0;
   }
 }
-
+//--------------------------------------------------------
 //HERO--------------------------------------------------------------------
+//--------------------------------------------------------
 
 .hero-container {
   background-color: $color-bg-primary;
   background-image: url();
   background-size: 100%;
   text-align: center;
+  height: 900px;
 }
 
 .hero-product-image {
@@ -268,8 +264,17 @@ h3 {
   display: block;
 }
 
-//CARDS---------------------------------------------------------------------
+#hero-banner-wave {
+  background-color: $color-bg-primary;
+  width: 100vw;
+  position: absolute;
 
+  top: 930px;
+}
+
+//--------------------------------------------------------
+//CARDS---------------------------------------------------------------------
+//--------------------------------------------------------
 .card-intro {
   text-align: center;
 }
@@ -282,8 +287,9 @@ h3 {
   border-radius: 40px;
   box-shadow: 0 0 50px 20px #f3f3f3;
 }
-
+//--------------------------------------------------------
 /* Container holding the image and the text */
+//--------------------------------------------------------
 
 .card-container {
   border: 1px solid lightgray;
@@ -318,10 +324,8 @@ h3 {
 
 .card-image {
   width: 100%;
-  //width: 350px;
 }
 
-// Card CENTER text ------------
 .card-text-container {
   text-align: center;
   height: 100px;
@@ -349,13 +353,15 @@ h3 {
   gap: 8rem 4rem;
   margin: 0 auto;
 }
-
+//--------------------------------------------------------
 //GRIDS-----------------------
+//--------------------------------------------------------
 .grid {
   display: grid;
   justify-content: center;
 }
 
+//--------------------------------------------------------
 //MEDIA QUERY==============================================
 //========================================================
 
@@ -367,6 +373,10 @@ h3 {
 }
 
 @media screen and (min-width: 768px) {
+  #hero-banner-wave {
+    background: transparent;
+    top: 330px;
+  }
   .hero-container {
     background-color: $color-bg-primary;
     background-image: url(../images/homepage-bg.png);
@@ -374,7 +384,7 @@ h3 {
     background-position-y: -125px;
     background-size: 100%;
     width: 100vw;
-    height: 100vh;
+    height: 500px;
   }
 
   .hero-container-product-image {
@@ -390,6 +400,21 @@ h3 {
 
   .btn--primary {
     width: 235px;
+  }
+
+  .hero-container {
+    background-color: $color-bg-primary;
+    background-image: url(../images/homepage-bg.png);
+    background-repeat: no-repeat;
+    background-position-y: -105px;
+    background-size: 100%;
+    width: 100vw;
+    height: 600px;
+  }
+
+  #hero-banner-wave {
+    background: transparent;
+    top: 330px;
   }
 
   .card-container {

@@ -71,7 +71,6 @@ h3 {
   background-color: #fcf4ef;
 }
 
-/*--------------------------------------------------------
 /* Lists */
 .list {
   list-style: none;
@@ -86,7 +85,6 @@ h3 {
 .list--tick {
   list-style-image: url(../images/tick.svg);
   padding-left: 3rem;
-  color: var(--color-headings);
 }
 
 .list--tick .list__item {
@@ -112,7 +110,7 @@ h3 {
 }
 
 .icon--primary {
-  fill: var(--color-primary);
+  fill: white;
 }
 
 .icon--white {
@@ -135,10 +133,6 @@ h3 {
           align-items: center;
 }
 
-.icon-container--accent {
-  background: var(--color-accent);
-}
-
 /* Collapsibles */
 .collapsible__header {
   display: -webkit-box;
@@ -154,26 +148,12 @@ h3 {
   font-size: 3rem;
 }
 
-.collapsible__chevron {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
-}
-
 .collapsible__content {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-}
-
-.collapsible--expanded .collapsible__chevron {
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
 }
 
 .collapsible--expanded .collapsible__content {
@@ -205,7 +185,6 @@ h3 {
 
 .nav__item {
   padding: 0.5rem 2rem;
-  border-bottom: 1px solid #222;
 }
 
 .nav__item:last-of-type {
@@ -267,6 +246,7 @@ h3 {
   background-image: url();
   background-size: 100%;
   text-align: center;
+  height: 900px;
 }
 
 .hero-product-image {
@@ -282,6 +262,13 @@ h3 {
 
 .hero-container-product-image {
   display: block;
+}
+
+#hero-banner-wave {
+  background-color: #edd3c1;
+  width: 100vw;
+  position: absolute;
+  top: 930px;
 }
 
 .card-intro {
@@ -376,6 +363,10 @@ h3 {
 }
 
 @media screen and (min-width: 768px) {
+  #hero-banner-wave {
+    background: transparent;
+    top: 330px;
+  }
   .hero-container {
     background-color: #edd3c1;
     background-image: url(../images/homepage-bg.png);
@@ -383,7 +374,7 @@ h3 {
     background-position-y: -125px;
     background-size: 100%;
     width: 100vw;
-    height: 100vh;
+    height: 500px;
   }
   .hero-container-product-image {
     display: none;
@@ -398,6 +389,19 @@ h3 {
   }
   .btn--primary {
     width: 235px;
+  }
+  .hero-container {
+    background-color: #edd3c1;
+    background-image: url(../images/homepage-bg.png);
+    background-repeat: no-repeat;
+    background-position-y: -105px;
+    background-size: 100%;
+    width: 100vw;
+    height: 600px;
+  }
+  #hero-banner-wave {
+    background: transparent;
+    top: 330px;
   }
   .card-container {
     width: 285px;
