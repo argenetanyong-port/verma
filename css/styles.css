@@ -5,7 +5,7 @@ html {
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2.4rem;
-  background-color: #fcf4ef;
+  background-color: #faead8;
 }
 
 /* Blocks */
@@ -246,7 +246,7 @@ h3 {
   background-image: url();
   background-size: 100%;
   text-align: center;
-  height: 900px;
+  height: 1000px;
 }
 
 .hero-product-image {
@@ -265,13 +265,13 @@ h3 {
 }
 
 #hero-banner-wave {
-  background-color: #edd3c1;
   width: 100vw;
   position: absolute;
   top: 930px;
 }
 
 .card-intro {
+  margin-top: 12rem;
   text-align: center;
 }
 
@@ -281,8 +281,8 @@ h3 {
 
 .card {
   border-radius: 40px;
-  -webkit-box-shadow: 0 0 50px 20px #f3f3f3;
-          box-shadow: 0 0 50px 20px #f3f3f3;
+  -webkit-box-shadow: 0 0 50px 20px #faead8;
+          box-shadow: 0 0 50px 20px #faead8;
 }
 
 /* Container holding the image and the text */
